@@ -1,0 +1,34 @@
+*{
+    font-family: 'Ubuntu';
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --background: #F5F5F5;
+    --text: #424242;
+    --btn: #48CFCB;
+}
+body{
+    background-color: var(--background);
+}
+.landing{
+    color: var(--text);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.landing button{
+    background-color: var(--btn);
+    margin-top: 4rem;
+    color: var(--background);
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.15s;
+    &:hover{
+        background-color: #229799;
+    }
+}
