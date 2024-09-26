@@ -27,6 +27,6 @@ export default function MoivngDiv() {
       width: 70,
       height: 70,
       transition: 'all 0.15s'
-    }} />
+    }} className='movingDiv' />
   );
 }
