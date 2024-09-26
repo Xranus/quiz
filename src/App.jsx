@@ -20,7 +20,7 @@ function App() {
           headingText={`Welcome! Here's a simple JavaScript quiz that might help you get better at it.`} 
           styleClass={'landing'}  />
         } />
-        <Route exact path='/quiz' element={<Quiz />}/>
+        <Route path='/quiz' element={<Quiz />}/>
       </Routes>
       </Router>
     </>
