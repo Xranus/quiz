@@ -9,7 +9,7 @@ export default function Landing({btnText, headingText, styleClass, reff}) {
     <div className={styleClass} ref={reff} data-aos="zoom-in-up" >
       
       <h1>{headingText}</h1>
-      <Link to={'/quiz'}><button>{btnText}</button></Link>
+      <Link to={'quiz'}><button>{btnText}</button></Link>
     </div>
   )
 }
