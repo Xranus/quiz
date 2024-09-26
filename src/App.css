@@ -37,14 +37,14 @@ button a{
     background-color: #424242;
     color: #F5F5F5;
     padding: 20px 50px;
-    max-width: fit-content;
+    max-width: 500px;
     border-radius: 18px;
     margin-top: 2rem;
 }
 .ans{
     display: flex;
     flex-direction: column;
-    max-width: fit-content;
+    max-width: 500px;
     justify-content: space-between;
 }
 .ans button{
@@ -112,10 +112,13 @@ button a{
     }
     .nxtBtn{
         left: 69%;
-        bottom: 17%;
+        bottom: 10%;
     }
     .movingDiv{
         display: none;
         
+    }
+    .snippet{
+        padding: 20px 30px;
     }
 }
