@@ -8,9 +8,6 @@
     --text: #424242;
     --btn: #48CFCB;
 }
-body{
-    background-color: var(--background);
-}
 .landing{
     color: var(--text);
     text-align: center;
