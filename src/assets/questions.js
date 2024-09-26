@@ -67,3 +67,4 @@ const result = func(4, 3, 2, 1);`,
         ]
     }
 ]
+export default Questions

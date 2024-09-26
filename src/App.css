@@ -33,3 +33,54 @@ button a{
     text-decoration: none;
     color: var(--background);
 }
+.snippet{
+    background-color: #424242;
+    color: #F5F5F5;
+    padding: 20px 50px;
+    max-width: fit-content;
+    border-radius: 18px;
+    margin-top: 2rem;
+}
+.ans{
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    justify-content: space-around;
+}
+.ans button{
+    color: #F5F5F5;
+    font-weight: bold;
+    background-color: #48CFCB;
+    border: none;
+    padding: 12px 105px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.15s;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.quiz{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    justify-content: space-between;
+}
+.content{
+    margin-right: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .quiz{
+        flex-direction: column;
+    }
+    .content{
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
