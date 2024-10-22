@@ -1,10 +1,12 @@
 import React from 'react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 function Code({c}) {
   return (
-    <div className='snippet'>
-      <pre><code>{c}</code></pre>
-    </div>
+      <SyntaxHighlighter className='snippet' language='javascript' style={tomorrow}>
+      {c}
+      </SyntaxHighlighter>
   )
 }
 

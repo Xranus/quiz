@@ -58,7 +58,7 @@ const result = func(4, 3, 2, 1);`,
         q:"What is the value of result?",
         code:
  `let value = 95;
- const result = value++;`,
+const result = value++;`,
         answers: [
             {text:"96",correct:false},
             {text:"95",correct:true},

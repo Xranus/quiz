@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Answers({ a }) {
+function Answers({ a, setNext, setScore, score }) {
   const [clickedIndex, setClickedIndex] = useState(null)
   const [correctAnswer, setCorrectAnswer] = useState(null)
   const [answered, setAnswered] = useState(false) 
@@ -11,6 +11,8 @@ function Answers({ a }) {
       setClickedIndex(index)
       setCorrectAnswer(isCorrect)
       setAnswered(true)
+      setNext(true)
+      isCorrect && setScore(score + 1)
     }
   }
 
@@ -18,7 +20,6 @@ function Answers({ a }) {
     if (clickedIndex === index) {
       return correctAnswer ? { backgroundColor: 'green' } : { backgroundColor: 'red' }
     }
-    return {}
   }
 
   return (
