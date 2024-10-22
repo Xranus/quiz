@@ -7,6 +7,7 @@ import Content from './Content'
 import { useEffect } from 'react'
 import { GrLinkNext } from "react-icons/gr"
 import { GrPowerReset } from "react-icons/gr"
+import { useNavigate } from 'react-router-dom'
 
 
 function Quiz() {
@@ -18,6 +19,7 @@ function Quiz() {
     useEffect(()=>{
         AOS.init()
     },[])
+    const navigate = useNavigate()
     function handleNext() {
         if(q < Questions.length-1){
             setq(q+1)
@@ -26,7 +28,11 @@ function Quiz() {
         }
         setNext(false)
     }
-    console.log("isFinished: " + isFinished)
+    function handleRetry() {
+        setScore(0)
+        setIsFinished(false)
+        navigate('/quiz')
+    }
   return (
     <>
     <div>
@@ -39,7 +45,7 @@ function Quiz() {
             <h1 className='aMessage'>Hurray! You have compeleted the quiz.</h1>
             <h2 style={{marginTop: "2rem"}}>Your Score: {score} out of {Questions.length}</h2>
             <h3 style={{marginTop: '1rem'}}>That's about {(score / Questions.length) * 100}%</h3>
-            <GrPowerReset className="againBtn" />
+            <a href="/quiz"><GrPowerReset className="againBtn" /></a>
         </div>)}
         {showNext && <GrLinkNext className='nxtBtn' onClick={handleNext} />}
     </div>
